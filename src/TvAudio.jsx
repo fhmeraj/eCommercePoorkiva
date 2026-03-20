@@ -9,7 +9,7 @@ function TvAudio() {
   ];
 
   return (
-    <div className="w-full h-full py-2 ">
+    <div className="w-full h-full py-2 mx-auto">
       <div className="w-full h-[13vh] bg-white flex items-center justify-between px-10 ">
         <h1 className="text-[#F26522] font-bold text-2xl">Tv & Audio</h1>
         <div className="flex">
@@ -35,13 +35,13 @@ function TvAudio() {
           </div>
         </div>
       </div>
-      <div className='className="w-full h-full bg-white flex '>
-        <div className="w-[50%]">
+      <div className='className="w-full h-full bg-white flex itcems-center justify-center gap-x-1"'>
+        <div className="w-[50%] flex items-center justify-center">
           <img src="https://img-prd-pim.poorvika.com/pageimg/Experience-the-latest-in-sound-innovation.webp" />
         </div>
-        <div className="w-[50%] grid grid-cols-2 gap-3 px-2">
+        <div className="w-[50%] grid grid-cols-2 gap-1 ">
           {images.map((i) => (
-            <div class="">
+            <div class="mx-auto">
               <img src={i} />
             </div>
           ))}

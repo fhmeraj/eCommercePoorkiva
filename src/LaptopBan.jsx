@@ -3,7 +3,7 @@ import React from 'react'
 function LaptopBan() {
   return (
     <div className="w-full h-full py-2 ">
-      <div className="w-full h-[13vh] bg-white flex items-center justify-between  ">
+      <div className="w-full h-[13vh] bg-white flex items-center justify-between px-10 ">
         <h1 className="text-[#F26522] font-bold text-2xl">
           Laptop & Tablets
 
