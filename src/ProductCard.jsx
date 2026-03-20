@@ -4,6 +4,7 @@ import { LuCirclePercent } from "react-icons/lu";
 
 function ProductCard() {
   const { state } = useLocation();
+  console.log("product details", state);
   return (
     <div className="w-full h-full flex bg-white py-6">
       <div className="w-[35%] h-full flex flex-col items-center justify-center space-y-7">

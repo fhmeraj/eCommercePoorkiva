@@ -73,10 +73,10 @@ function Navbar() {
               </button>
               <div
                 class="absolute left-0 mt-0 w-38 bg-white border rounded shadow z-10
-           invisible opacity-0 translate-y-2 scale-95
-           group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100
-           transition-all duration-300 ease-out
-           flex flex-col"
+                        invisible opacity-0 translate-y-2 scale-95
+                        group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100
+                        transition-all duration-300 ease-out
+                        flex flex-col"
               >
                 <button
                   onClick={() => setOpen(true)}
@@ -87,9 +87,10 @@ function Navbar() {
                 <button class="text-left px-4 py-2 font-semibold text-black hover:bg-gray-100">
                   Sign Up
                 </button>
-                <button 
-                 onClick={()=>navigate('/Setting')}
-                 class="text-left px-4 py-2 font-semibold text-black hover:bg-gray-100">
+                <button
+                  onClick={() => navigate("/Setting")}
+                  class="text-left px-4 py-2 font-semibold text-black hover:bg-gray-100"
+                >
                   Account Setting
                 </button>
               </div>

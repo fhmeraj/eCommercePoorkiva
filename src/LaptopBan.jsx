@@ -3,7 +3,7 @@ import React from 'react'
 function LaptopBan() {
   return (
     <div className="w-full h-full py-2 ">
-      <div className="w-full h-[13vh] bg-white flex items-center justify-between px-10 ">
+      <div className="w-full h-[13vh] bg-white flex items-center justify-between  ">
         <h1 className="text-[#F26522] font-bold text-2xl">
           Laptop & Tablets
 
@@ -16,23 +16,23 @@ function LaptopBan() {
           <div className=""><h1 className="hover:text-[#F26522] font-semibold mr-5 ml-5">Accessories</h1></div>
         </div>
       </div>
-      <div className="w-full h-full bg-white flex gap-x-2">
-        <div className="w-[25%] h-full flex flex-col ">
-          <div className="w-full h-[50%] flex items-center justify-center">
+      <div className="w-full h-full bg-white flex items-center justify-center gap-x-1">
+        <div className="w-[25%] h-full flex items-center justify-center flex-col">
+          <div className=" h-[50%] ">
             <img src="https://img-prd-pim.poorvika.com/pageimg/Macbooks-2608801.webp" />
           </div>
-          <div className="w-full h-[50%]">
+          <div className=" h-[50%]">
             <img src="https://img-prd-pim.poorvika.com/pageimg/Gaming-Laptop-2608815.webp" />
           </div>
         </div>
-        <div className="w-[50%] h-full ">
+        <div className="mx-auto h-full ">
           <img src="https://img-prd-pim.poorvika.com/pageimg/Macbook-Air-M4-Best-Laptop.webp" />
         </div>
-        <div className="w-[25%] h-full flex flex-col ">
-          <div className="w-full h-[50%]">
+        <div className="w-[25%] h-full items-center justify-center flex flex-col ">
+          <div className=" h-[50%]">
             <img src="https://img-prd-pim.poorvika.com/cdn-cgi/image/width=300,height=170,quality=75/pageimg/2-in-1-laptop-w.png"/>
           </div>
-          <div className="w-full h-[50%]">
+          <div className=" h-[50%]">
             <img src="https://img-prd-pim.poorvika.com/pageimg/Windows-Laptop-2608843.webp"/>
           </div>
         </div>
