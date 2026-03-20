@@ -15,8 +15,8 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className=" bg-gray-200 ">
-      <Navbar />
+    <div className=" bg-gray-200 flex flex-col items-center justify-center">
+      <Navbar/>
 
       <Routes>
         <Route path="/" element={<Home />} />

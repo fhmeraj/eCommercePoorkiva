@@ -16,63 +16,53 @@ function Navbar() {
   return (
     <div className="w-full h-full sticky top-0 z-20">
       {/* Top Navigation */}
-      <nav className="w-full h-[8vh] bg-[#FF5B28] flex">
+      <nav className="w-full bg-[#FF5B28] flex flex-wrap items-center justify-between px-2 md:px-4 py-2 md:py-1">
+        
         {/* Logo */}
         <div
           onClick={() => navigate("/")}
-          className="w-[20%] h-full flex items-center justify-center p-5"
+          className="w-1/2 md:w-[20%] flex items-center justify-start md:justify-center cursor-pointer"
         >
           <img
+            className="h-8 md:h-10"
             src="https://img.poorvika.com/common/Poorvika-english-logo.svg"
             alt="Poorvika Logo"
           />
         </div>
 
-        {/* Search Bar */}
-        <div className="w-[32%] relative flex items-center justify-center">
-          <input
-            className="w-full bg-white text-sm border rounded-2xl pl-3 pr-28 py-1"
-            placeholder="Search for Products, Brands, Offers"
-          />
-          <button
-            className="absolute right-2 flex items-center justify-center rounded-full bg-slate-800 p-1 text-white hover:bg-slate-700"
-            type="button"
-          >
-            <IoSearchSharp />
-          </button>
-        </div>
+        {/* Info Blocks (Mobile: Account + Cart right aligned, Desktop: Full info blocks) */}
+        <div className="w-1/2 md:w-[45%] flex justify-end md:justify-center items-center gap-4 md:gap-2 lg:gap-4 order-2 md:order-3">
+          <div className="hidden md:flex flex-col items-center justify-center text-[10px] lg:text-xs text-white cursor-pointer">
+            <p className="text-[10px]">Delivery to</p>
+            <h1 className="flex items-center font-bold text-xs lg:text-sm">
+              CENTRAL del <IoLocationSharp className="ml-1" />
+            </h1>
+          </div>
+          <div className="hidden md:flex flex-col items-center justify-center text-[10px] lg:text-xs text-white cursor-pointer">
+            <p className="text-[10px]">Locate</p>
+            <h1 className="flex items-center font-bold text-xs lg:text-sm">
+              Stores <MdKeyboardArrowDown className="ml-1" />
+            </h1>
+          </div>
 
-        {/* Icons Section */}
-        <div className="w-[48%] flex items-center justify-center">
-          <div className="w-[20%] flex flex-col items-center justify-center text-xs text-white">
-            <p>Delivery to</p>
-            <h1 className="flex items-center font-bold">
-              CENTRAL del <IoLocationSharp />
+          <div className="flex flex-col items-center justify-center text-[10px] lg:text-xs text-white cursor-pointer relative">
+            <p className="hidden md:block text-[10px]">0 Items</p>
+            <h1 className="flex items-center font-bold text-xl md:text-[10px] lg:text-sm">
+              <span className="hidden md:block mr-1">₹ 0</span> <TiShoppingCart className="text-2xl md:text-lg lg:text-sm md:ml-1" />
             </h1>
+            <span className="md:hidden absolute -top-1 -right-2 bg-white text-[#FF5B28] rounded-full h-4 w-4 flex items-center justify-center text-[10px] font-bold">0</span>
           </div>
-          <div className="w-[20%] flex flex-col items-center justify-center text-xs text-white">
-            <p>Locate</p>
-            <h1 className="flex items-center font-bold">
-              Stores <MdKeyboardArrowDown />
-            </h1>
-          </div>
-          <div className="w-[20%] flex flex-col items-center justify-center text-xs text-white">
-            <p>0 Items</p>
-            <h1 className="flex items-center font-bold">
-              ₹ 0 <TiShoppingCart />
-            </h1>
-          </div>
-          <div className="w-[20%] flex flex-col items-center justify-center text-xs text-white">
-            <p>My Account</p>
 
-            <div class="relative inline-block group">
-              <button class="text-black  px-4 py-2 rounded">
-                <h1 className="flex items-center font-bold cursor-pointer">
-                  Sign In <IoPersonCircleOutline />
+          <div className="flex flex-col items-center justify-center text-[10px] lg:text-xs text-white cursor-pointer">
+            <p className="hidden md:block text-[10px]">My Account</p>
+            <div className="relative inline-block group">
+              <button className="text-white md:text-black md:bg-white md:px-2 md:py-1 rounded flex items-center">
+                <h1 className="flex items-center font-bold">
+                  <span className="hidden md:block mr-1">Sign In</span> <IoPersonCircleOutline className="text-3xl md:text-lg lg:text-sm md:ml-1 text-white md:text-black" />
                 </h1>
               </button>
               <div
-                class="absolute left-0 mt-0 w-38 bg-white border rounded shadow z-10
+                className="absolute right-0 md:left-0 mt-0 w-38 bg-white border rounded shadow z-10
                         invisible opacity-0 translate-y-2 scale-95
                         group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100
                         transition-all duration-300 ease-out
@@ -97,11 +87,26 @@ function Navbar() {
             </div>
           </div>
         </div>
+
+        {/* Search Bar */}
+        <div className="w-full md:w-[32%] relative mt-2 md:mt-0 order-3 md:order-2">
+          <input
+            className="w-full bg-white text-xs md:text-sm border rounded-2xl pl-3 pr-10 py-2 md:py-1 outline-none"
+            placeholder="Search for Products, Brands, Offers"
+          />
+          <button
+            className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-slate-800 p-1.5 md:p-1 text-white hover:bg-slate-700"
+            type="button"
+          >
+            <IoSearchSharp />
+          </button>
+        </div>
+
       </nav>
 
       {/* Category Header */}
-      <header className="w-full h-[9vh] bg-white rounded-b-xl shadow-2xl flex items-center justify-center text-xs space-x-8 font-bold">
-        <div class="relative inline-block group">
+      <header className="hidden md:flex w-full h-[9vh] bg-white rounded-b-xl shadow-2xl items-center justify-center text-xs space-x-8 font-bold">
+        <div className="relative inline-block group">
           <button class="text-black  px-4 py-2 rounded">
             Mobiles & Accessories
           </button>
